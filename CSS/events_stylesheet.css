@@ -1,0 +1,180 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Vidaloca', serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Logo at the Top */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Events Title */
+.events-title {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.events-title img {
+    width: 500px; /* Larger title image */
+}
+
+/* Venues Button */
+.events-button {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #7E8FA6;
+    color: white;
+    font-family: 'Tilt Warp', cursive;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Week Containers */
+.week-container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.week-header {
+    font-size: 3rem; /* Larger Week Header */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Event Box Styling */
+.events-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    background-color: rgba(126, 143, 166, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.event-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    width: 300px;
+    height: 450px; /* Uniform box size */
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-card img {
+    width: 100%;
+    height: 250px; /* Uniform image size */
+    object-fit: cover; /* Ensures images are the same size and well-fit */
+    border-radius: 15px;
+}
+
+.event-card p {
+    margin: 10px;
+    font-size: 2rem; /* Larger text under images */
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    cursor: pointer;
+}
+
+/* General styles for title, logo, and button */
+.title-image {
+    max-width: 100%; /* Ensures it scales */
+    margin: 0 auto;  /* Center the title image */
+    display: block;
+}
+
+.venues-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    font-family: 'Tilt Warp', cursive;
+    background-color: rgba(126, 143, 166, 0.89);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.venues-button:hover {
+    background-color: rgba(97, 112, 130, 0.9);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    /* For phone screens */
+
+    .title-image {
+        width: 70%; /* Make the title image smaller */
+        margin: 10px auto; /* Add margin */
+    }
+
+    .venues-button {
+        display: block; /* Stack the button */
+        margin: 10px auto; /* Center button */
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For very small screens */
+
+    .title-image {
+        width: 50%; /* Smaller for very narrow screens */
+        margin: 20px auto; /* More spacing */
+    }
+
+    .venues-button {
+        font-size: 12px;
+        padding: 15px 20px;
+        margin-top: 30px; /* Add extra space */
+    }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .events-title img {
+        width: 350px; /* Slightly smaller on mobile */
+    }
+
+    .events-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 90%;
+    }
+
+    .events-button {
+        top: 70px;
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+}

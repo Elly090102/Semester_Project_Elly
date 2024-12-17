@@ -1,0 +1,68 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    min-height: 100vh;       /* Full height of the screen */
+    background-color: #fff;
+    margin: 0;
+}
+
+/* Splash container */
+.splash-container {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    width: 100%;
+}
+
+/* Title Image - Larger */
+.title-image {
+    width: 70%; /* Make the title 70% of the screen width */
+    max-width: 800px; /* Limit for very large screens */
+    margin-bottom: 40px; /* Space between images */
+}
+
+/* Hand Image - Larger and moved up */
+.hand-image {
+    width: 80%; /* Increase the hand image size */
+    max-width: 400px; /* Limit size on larger screens */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: -300px; /* Move the hand image up */
+}
+
+.hand-image:hover {
+    transform: scale(1.1); /* Hover zoom effect */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .title-image {
+        width: 80%; /* Increase width for smaller screens */
+    }
+
+    .hand-image {
+        width: 70%; /* Make the hand image larger */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-image {
+        width: 90%; /* Fill screen width on very small devices */
+    }
+
+    .hand-image {
+        width: 80%; /* Further adjust hand image size */
+        margin-top: 5px;
+    }
+}
